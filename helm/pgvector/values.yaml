@@ -15,7 +15,7 @@ postgresql:
 persistence:
   enabled: true
   size: 64Gi
-  storageClassName: linode-block-storage-retain
+  storageClassName: gp2
 
 service:
   type: ClusterIP
@@ -28,3 +28,6 @@ resources:
   requests:
     cpu: 500m
     memory: 512Mi
+
+nodeSelector:
+  ic: pg
